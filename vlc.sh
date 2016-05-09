@@ -34,8 +34,21 @@ where:
 * mux=ts sets multiplexing to mpeg-2 Transport stream
 
 
-Today
+Note
 ------
 
 Found that RTP is the protocol of choice for video streaming.
 there are android rtp streamig client libraries
+
+
+
+Google's documentation recommends H.264 with a bitrate of 500kbps, and AAC-LC at 128kbps for audio
+http://www.techradar.com/news/home-cinema/best-codecs-for-video-and-how-to-encode-1044575
+
+
+new resources on RTP and android
+------------------------------------
+
+https://www.wowza.com/forums/content.php?62-How-to-troubleshoot-RTSP-RTP-playback
+
+http://androidsourcecode.blogspot.com/2013/10/android-rtp-sample-receiving-via-vlc.html
