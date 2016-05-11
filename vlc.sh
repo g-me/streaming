@@ -10,13 +10,18 @@ vlc screen:// :screen-fps=30 :screen-caching=100 --sout
 '#transcode{vcodec=mp4v,vb=4096,acodec=mpga,ab=256,scale=1,width=1280,height=800}:
 rtp{dst=192.168.1.26,port=1234,access=udp,mux=ts}'
 
-vlc screen:// :screen-fps=30 :screen-caching=100 --sout '#transcode{vcodec=mp4v,vb=4096,acodec=mpga,ab=256,scale=1,width=1280,height=800}:rtp{dst=192.168.1.26,port=1234,access=udp,mux=ts}'
+vlc screen:// :screen-fps=30 :screen-caching=100 :screen-top=30 :screen-left=120 :screen-width=300 :screen-height=300 --sout  '#transcode{vcodec=mp4v,vb=4096,acodec=mpga,ab=256,scale=1,width=1280,height=800}:rtp{dst=192.168.1.26,port=1234,access=udp,mux=ts}'
 
 where:
 
 * screen:// is our input module selection
 * :screen-fps=30 specifies that we want to screengrab at 30 fps (from default 5 fps)
 * :screen-caching=100 sets the internal caching to 100ms (from default 300 ms)
+* :screen-width=300  sets the width of the subscreen
+* :screen-height=300 sets the height of the subscreen
+* :screen-top=30 	sets the top edge coordinate of the subscreen
+* :screen-left=30 	sets the left edge coordinate of the subscreen
+
 * --sout is our output chain.
 * #transcode tells vlc that we first want to transcode the input using parameters to follow
 * {} contains our transcoding parameters
